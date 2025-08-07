@@ -1,0 +1,19 @@
+-- Conectarse a RMAN y ejecutar el script
+-- rman target /
+
+RUN {
+  -- Mostrar fecha y hora de inicio
+  REPORT SCHEMA;
+
+  -- Realizar backup completo de la base de datos
+  BACKUP DATABASE TAG 'full_backup';
+
+  -- Respaldar los archivos de control
+  BACKUP CURRENT CONTROLFILE TAG 'controlfile_backup';
+
+  -- Respaldar todos los archivos de redo archivados
+  BACKUP ARCHIVELOG ALL TAG 'archivelog_backup' DELETE INPUT;
+
+  -- Mostrar el listado de backups al finalizar
+  LIST BACKUP SUMMARY;
+}
