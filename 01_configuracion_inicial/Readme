@@ -1,0 +1,28 @@
+# Paso 01 – Configuración Inicial
+
+Este primer paso prepara el entorno para realizar pruebas de backup y recuperación con Oracle RMAN.
+
+## Objetivo
+
+- Asegurar que la base de datos esté operando en modo `ARCHIVELOG`.
+- Crear un esquema de prueba con un usuario llamado `backup_daniel`.
+- Generar una tabla con datos simulados para probar el backup y recovery.
+
+## Detalles técnicos
+
+- Se crea un nuevo `tablespace` llamado `ts_backup_demo`.
+- Se define el usuario `backup_daniel` con permisos básicos y espacio asignado.
+- Se genera una tabla `demo_empleados` con algunos registros iniciales.
+
+## Importante
+
+- Si la base de datos no está en modo `ARCHIVELOG`, este paso requiere detener y montar la base para activarlo.
+- Los scripts deben ejecutarse con privilegios adecuados (`SYSDBA` para cambiar el modo de logueo).
+
+## Resultado 
+
+Al finalizar este paso, deberías tener:
+
+- La base funcionando en `ARCHIVELOG`.
+- Un usuario `backup_daniel` configurado.
+- Datos disponibles para realizar pruebas de respaldo y restauración en los siguientes pasos.
