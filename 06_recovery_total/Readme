@@ -1,0 +1,18 @@
+Este paso demuestra cómo realizar una recuperación completa de la base de datos usando RMAN, a partir de un backup previamente generado (paso 02).
+Simula un escenario en el que se pierde toda la base de datos y se requiere restaurar y recuperar desde cero.
+
+# Requisitos
+-Haber ejecutado previamente el paso 02_backup_completo y contar con ese respaldo vigente.
+-Conocer la ubicación del backup y del controlfile de respaldo.
+-Tener acceso como sysdba desde RMAN.
+-Tener los archivos de parámetro (pfile o spfile) disponibles o respaldados.
+
+# Pasos
+1-Simulación de pérdida total de la base de datos (apagado, eliminación de archivos).
+2-Inicio en modo nomount con un pfile.
+3-Restauración del controlfile desde el backup.
+4-Montaje de la base de datos.
+5-Restauración de todos los datafiles.
+6-Recuperación de la base de datos completa.
+7-Apertura de la base de datos con RESETLOGS.
+8-Verificación del estado y consistenci
