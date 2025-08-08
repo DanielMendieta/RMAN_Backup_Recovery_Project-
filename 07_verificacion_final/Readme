@@ -1,0 +1,21 @@
+Verificación Final de Recuperación con RMAN
+
+En este paso se realizan diversas consultas para comprobar que la base de datos ha sido restaurada y está operando correctamente después de una recuperación total.
+
+## Incluye:
+
+- Verificación del estado y modo de apertura de la base.
+- Confirmación de que el usuario y esquema `backup_daniel` están activos.
+- Consulta del listado de tablas y conteo de registros en las tablas principales.
+- Validación del estado de los objetos del esquema para asegurar que estén válidos.
+- Opcional: revisión de logs de recuperación para detectar posibles errores.
+
+## Objetivo
+
+Garantizar que la base de datos esté en condiciones óptimas tras la restauración y que los datos y objetos esperados estén disponibles y en buen estado.
+
+## Requisitos
+
+- Haber completado el paso anterior de recuperación total.
+- Acceso con privilegios adecuados para consultar vistas de sistema.
+
