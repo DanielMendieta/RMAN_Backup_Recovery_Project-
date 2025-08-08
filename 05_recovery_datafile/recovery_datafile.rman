@@ -1,0 +1,15 @@
+CONNECT TARGET /
+
+STARTUP MOUNT;
+
+# Recuperar el datafile perdido (reemplaza la ruta por la tuya si es diferente)
+RECOVER DATAFILE '/u01/app/oracle/oradata/ORCL/ts_backup_demo01.dbf';
+
+# Abrimos la base normalmente
+ALTER DATABASE OPEN;
+
+#Comprobar la restauracion
+
+sqlplus / as sysdba
+
+SELECT file#, name, status FROM v$datafile WHERE name LIKE '%ts_backup_demo%';
