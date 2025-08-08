@@ -17,3 +17,8 @@ RUN {
   -- Mostrar el listado de backups al finalizar
   LIST BACKUP SUMMARY;
 }
+
+@/ruta/al/script/02_backup_completo.rman
+
+
+
