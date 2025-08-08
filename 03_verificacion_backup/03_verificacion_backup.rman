@@ -1,0 +1,11 @@
+LIST BACKUP SUMMARY;
+
+LIST BACKUP OF DATABASE;
+
+LIST BACKUP OF CONTROLFILE;
+
+
+--Ejecucion script
+
+rman target /
+@/ruta/a/03_verificacion_backup.rman
