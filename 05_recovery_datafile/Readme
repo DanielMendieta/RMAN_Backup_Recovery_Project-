@@ -1,0 +1,17 @@
+# Paso 05 – Recuperación de Datafile Perdido con RMAN
+
+En este paso se realiza la recuperación de un datafile previamente eliminado, simulando un escenario de pérdida física real. 
+RMAN se encarga de restaurar el archivo a partir de los backups existentes y los archived logs disponibles.
+
+## Objetivo
+
+Demostrar cómo **recuperar un archivo de datos** de forma segura utilizando RMAN, sin necesidad de intervención manual o copias físicas.
+
+## Proceso realizado
+
+- Montaje de la base de datos.
+- Recuperación automática del datafile mediante el comando `RECOVER DATAFILE`.
+- Apertura de la base de datos una vez finalizada la recuperación.
+
+## Validación
+Tras ejecutar el script, se puede comprobar que el archivo ha sido restaurado correctamente y que el sistema vuelve a estar en estado operativo mediante SQL*Plus
