@@ -5,11 +5,13 @@ Demostrar la implementación de una estrategia de respaldo y recuperación utili
 
 ## Estructura del proyecto
 
-- `01_configuracion_inicial/`: Configuración del entorno y creación de objetos de prueba.
-- `02_backup_completo/`: Ejecución de respaldos completos con RMAN.
-- `03_simulacion_fallo/`: Borrado de datos o tablas simulando un error.
-- `04_recovery_con_rman/`: Restauración de los objetos o datos perdidos.
-- `05_validacion/`: Verificación final del éxito del proceso de recuperación.
+- 01_configuracion_inicial/: Configuración del entorno y creación de objetos de prueba.
+- 02_backup_completo/: Ejecución de respaldos completos con RMAN.
+- 03_verificacion_backup/: Validación y verificación de los backups realizados.
+- 04_simulacion_perdida_datos/: Simulación de pérdida o eliminación de datos para pruebas.
+- 05_recovery_datafile/: Restauración y recuperación de datafiles específicos tras la pérdida.
+- 06_recovery_total/: Recuperación completa de toda la base de datos ante pérdida total.
+- 07_verificacion_final/: Comprobación del estado, consistencia y disponibilidad luego de la recuperación.
 
 ## Tecnologías y herramientas utilizadas
 
