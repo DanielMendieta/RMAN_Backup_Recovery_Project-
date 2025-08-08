@@ -1,0 +1,20 @@
+-- Conexión desde RMAN:
+-- rman target /
+
+-- Paso 1: Iniciar la instancia en modo NOMOUNT
+STARTUP NOMOUNT PFILE='/u01/app/oracle/product/19.0.0/dbhome_1/dbs/initORCL.ora';
+
+-- Paso 2: Restaurar el control file desde el backup
+RESTORE CONTROLFILE FROM '/u01/backups/controlfile_backup.bkp';
+
+-- Paso 3: Montar la base de datos
+ALTER DATABASE MOUNT;
+
+-- Paso 4: Restaurar todos los datafiles
+RESTORE DATABASE;
+
+-- Paso 5: Recuperar la base de datos
+RECOVER DATABASE;
+
+-- Paso 6: Abrir la base con RESETLOGS
+ALTER DATABASE OPEN RESETLOGS;
