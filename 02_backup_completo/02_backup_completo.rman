@@ -18,6 +18,13 @@ RUN {
   LIST BACKUP SUMMARY;
 }
 
+--Ejecucion script
+
+rman target /
+
+@/ruta/a/03_verificacion_backup.rman
+
+
 @/ruta/al/script/02_backup_completo.rman
 
 
