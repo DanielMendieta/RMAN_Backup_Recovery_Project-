@@ -1,0 +1,16 @@
+## Objetivo
+Simular un escenario de pérdida de datos eliminando físicamente un datafile del tablespace USERS. 
+Esto permite luego probar la recuperación de datos con RMAN en el siguiente paso del proyecto.
+
+## Pasos realizados
+Identificación del archivo físico
+Se ejecutó una consulta en la vista DBA_DATA_FILES para ubicar la ruta exacta del datafile asociado al tablespace USERS.
+
+## Eliminación manual del archivo
+Desde el sistema operativo (Linux o Windows), se eliminó el archivo identificado en el paso anterior.
+
+## importante
+No se debe cerrar la base de datos.
+Esta eliminación provocará errores internos en Oracle cuando se intente acceder al tablespace afectado.
+
+
