@@ -1,0 +1,5 @@
+## Verificación del Backup
+
+Este script permite comprobar que los backups realizados están disponibles y fueron generados correctamente.
+Se listan tanto los respaldos completos de la base de datos como los del archivo de control, permitiendo verificar su existencia, status y fecha.
+Esta etapa es clave para asegurar que el backup puede ser utilizado en una futura restauración.
